@@ -396,3 +396,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+.idea
+
+#Custom Path
+src/Web/Uploads/EnglishParagraph/*
+!src/Web/Uploads/EnglishParagraph/English.pdf

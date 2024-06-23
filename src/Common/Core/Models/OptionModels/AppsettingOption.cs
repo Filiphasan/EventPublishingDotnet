@@ -4,10 +4,20 @@ public class AppsettingOption
 {
     public const string SectionName = "Settings";
 
+    public required AppsettingElasticOptionModel Elastic { get; init; }
     public required AppsettingMongoOptionModel Mongo { get; init; }
     public required AppsettingPostgreOptionModel Postgres { get; init; }
     public required AppsettingRabbitMqOptionModel RabbitMq { get; init; }
     public required string JwtKey { get; init; }
+}
+
+public class AppsettingElasticOptionModel
+{
+    public required string ProjectName { get; set; }
+    public required string ElasticUri { get; set; }
+    public required string Environment { get; set; }
+    public required string Username { get; set; }
+    public required string Password { get; set; }
 }
 
 public class AppsettingMongoOptionModel
@@ -38,6 +48,4 @@ public class AppsettingRabbitMqOptionModel
     public required string Password { get; init; }
     public required string Host { get; init; }
     public required int Port { get; init; }
-
-    public string ConnectionString => $"amqp://{Username}:{Password}@{Host}:{Port}";
 }

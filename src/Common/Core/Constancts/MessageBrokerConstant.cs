@@ -4,11 +4,12 @@ public static class MessageBrokerConstant
 {
     public static class QueueNames
     {
-        private const string HandleOrder = "handle-order";
+        public const string CreateOrder = "create-order-queue";
+        public const string CreateOrderPayment = "create-order-payment-queue";
     }
 
     public static class ExchangeNames
     {
-        public const string HandleOrder = "handle-order-exchange";
+        public const string CreateOrder = "create-order-exchange";
     }
 }

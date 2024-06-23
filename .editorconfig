@@ -1,0 +1,41 @@
+﻿# En üst düzey .editorconfig dosyası, ayarların bu dizinden itibaren geçerli olduğunu ve üst dizinlerden ayar miras alınmayacağını belirtir.
+root = true
+
+# Tüm dosyalar için genel ayarlar
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+max_line_length = 120
+
+# C# dosyaları için ayarlar
+[*.{cs,csx,vb,vbx}]
+indent_style = space
+indent_size = 4
+# Namespace tanımlarını dosya kapsamlı yapar
+csharp_style_namespace_declarations = file_scoped:suggestion
+
+# JSON dosyaları için ayarlar
+[*.{js,json}]
+indent_style = space
+indent_size = 2
+
+[*.csproj]
+indent_style = space
+indent_size = 2
+
+# C# dosyaları için kod biçimlendirme stili ve boşluk kullanımı
+[*.{cs,csx,vb}]
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_members_in_anonymous_types = true
+csharp_new_line_between_query_expression_clauses = true
+
+csharp_space_after_cast = false
+csharp_space_after_keywords_in_control_flow_statements = true
+csharp_space_between_method_declaration_parameter_list_parentheses = false
+csharp_space_between_method_call_parameter_list_parentheses = false
+csharp_space_between_parentheses = expressions, type_casts
